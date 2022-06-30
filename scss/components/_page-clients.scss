@@ -1,0 +1,48 @@
+// ----------- section clients ---------
+.clients {
+
+	&__title {}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -15px;
+
+		@media screen and (min-width: 1200px) {
+			flex-wrap: nowrap;
+		}
+	}
+	&__item {
+		margin: 15px;
+
+		flex-basis: calc((100% - 60px) / 2);
+
+		@media screen and (min-width: 768px) {
+			flex-basis: calc((100% - 90px) / 3);
+		}
+
+		@media screen and (min-width: 1200px) {
+			flex-basis: calc((100% - 180px) / 6);
+			// &:not(:last-child){
+			// 	margin-right: 30px;
+			// }
+		}
+	}
+	&__link {
+		@include flexCenter();
+		height: 92px;
+		border: 1px solid $color-svg-icon;
+		border-radius: 4px;
+		color: $color-svg-icon;
+
+		@include transition($property:color);
+		@include transition($property:border);
+
+		&:hover, &:focus{
+			color: $main-color;
+			border: 1px solid $main-color;
+		}
+	}
+	&__icon {
+		fill: currentColor;
+	}
+}

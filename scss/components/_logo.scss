@@ -1,0 +1,26 @@
+// ----------- logo -----------
+
+.logo {
+	display: block;
+	font-family: $font-logo;
+	font-weight: 700;
+	// font-size: 26px;
+	font-size: 24px;
+	// line-height: 1.19;
+	line-height: 1.17;
+	color: $main-color;
+	span{
+		color: $color-main-dark;
+	}
+	&--wht {
+		
+		span {
+			color: $color-main-light;	
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 26px;
+		line-height: 1.19;
+	}
+}

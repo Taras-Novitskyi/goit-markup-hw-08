@@ -1,0 +1,55 @@
+// ----------- section principles -----------
+
+.principles {
+
+	&__list {
+		font-size: 14px;
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -15px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			flex-wrap: nowrap;
+		}
+	}
+	&__item {
+
+		@media screen and (max-width: 767px) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			width: calc((100% - 60px) / 2);
+			margin: 15px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			width: calc((100% - 120px) / 4);
+		}
+	}
+	&__block {
+		@include flexCenter(); 
+		height: 120px;
+		background-color: $color-bg-light2;
+		border-radius: 4px;
+		margin-bottom: 30px;
+	}
+	&__icon {}
+	&__title {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+
+		@media screen and (min-width: 768px) {
+			text-align: left;
+		}
+	}
+	&__subtitle {
+		line-height: 1.71;
+		color: $color-second-dark;
+	}
+}

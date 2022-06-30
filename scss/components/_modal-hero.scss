@@ -1,0 +1,66 @@
+
+	// -------------  modal view ----------------
+
+	.modal-hero{
+		background-color: $color-main-light;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+		border-radius: 4px;
+
+		transform: scale(1);
+			
+		@include transition($property:transform);
+	
+		@media screen and (min-width: 480px) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			
+			width: 452px;
+
+			transform: translate(-50%, -50%) scale(1);
+		}
+
+		@media screen and (min-width: 768px) {}
+
+		@media screen and (min-width: 1200px) {
+			width: 528px;
+		}
+
+		.hero__backdrop.is-hidden & {
+			transform: scale(0.8);
+
+			@media screen and (min-width: 480px) {
+				transform: translate(-50%, -50%) scale(0.8);
+			}
+		}
+
+		&__close{
+			@include flexCenter();
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			right: 8px;
+			top: 8px;
+	
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 50%;
+			color: #000000;
+			background-color: $color-main-light;
+	
+			@include transition($property:color);
+	
+			&:hover{
+				color: $main-color;
+			}
+		}
+		&__closed-icon{
+			fill: currentColor;
+		}
+
+		&__form {}
+	}
+
+	body.modal-open {
+		overflow: hidden;
+	}
+

@@ -1,0 +1,127 @@
+// ------------- hero form ----------------
+
+.form {
+	padding: 40px;
+
+	&__title{
+		margin-bottom: 30px;
+		font-size: 20px;
+		text-transform: none;
+	}
+	&__field {
+		position: relative;
+		display: block;
+		margin-bottom: 28px;
+
+		&:focus-within > .form__icon{
+			color: $main-color;
+		}
+		&:focus-within > .form__input{
+			border: 1px solid $main-color;
+		}
+	}
+	&__input {
+		width: 100%;
+		padding: 12px;
+		padding-left: 42px;
+		border: 1px solid rgba(33, 33, 33, 0.2);
+		border-radius: 4px;
+		outline: transparent;
+
+		@include transition($property:border);
+	}
+	&__lable {
+		display: block;
+		text-align: left;
+		margin-bottom: 4px;
+		font-size: 12px;
+		line-height: 1.17;
+		letter-spacing: 0.01em;
+		color: $color-second-dark;
+	}
+	&__icon {
+		position: absolute;
+		bottom: 14px;
+		left: 14px;
+
+		fill: currentColor;
+
+		@include transition($property:color);
+	}
+	&__field-textarea{
+		position: relative;
+		display: block;
+		margin-bottom: 20px;
+
+		&:focus-within > .form__textarea{
+			border: 1px solid $main-color;
+		}
+	}
+	
+	&__textarea{
+		width: 100%;
+		height: 120px;
+		padding: 12px 16px;
+		outline: transparent;
+
+		border: 1px solid rgba(33, 33, 33, 0.2);
+		border-radius: 4px;
+		
+		@include transition($property:border);
+
+		&::placeholder{
+			font-size: 14px;
+			line-height: 1.14;
+			letter-spacing: 0.01em;
+			color: rgba(117, 117, 117, 0.5);
+		}
+	}
+	&__field-checkbox{
+		@include flexCenter();
+		margin-bottom: 30px;
+		font-size: 12px;
+		line-height: 1.17;
+		letter-spacing: 0.028em;
+		color: $color-second-dark;
+
+		@media screen and (min-width: 1200px) {
+			font-size: 14px;
+			line-height: 1.71;
+		}
+	}
+	&__input-checkbox{
+		appearance: none;
+		position: absolute;
+
+		&:focus + .form__icon-checkbox{
+			background-image: url('../img/webstudio/hero/modal/unselected-focus.svg');
+			background-repeat: no-repeat;
+		}
+
+		&:checked + .form__icon-checkbox{
+			background-image: url('../img/webstudio/hero/modal/check.svg');
+			background-repeat: no-repeat;
+		}
+	}
+	&__icon-checkbox{
+		display: inline-block;
+		width: 16px;
+		height: 15px;
+		background-image: url('../img/webstudio/hero/modal/unselected.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	&__lable-checkbox{
+		text-align: left;
+		margin-left: 8px;
+		
+	}
+	&__link-checkbox{
+		color: $main-color;
+		text-decoration: underline;
+
+		&:hover, &:focus{
+			text-decoration: none;
+		}
+	}
+}
