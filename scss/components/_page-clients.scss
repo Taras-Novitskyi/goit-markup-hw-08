@@ -22,9 +22,6 @@
 
 		@media screen and (min-width: 1200px) {
 			flex-basis: calc((100% - 180px) / 6);
-			// &:not(:last-child){
-			// 	margin-right: 30px;
-			// }
 		}
 	}
 	&__link {
@@ -34,8 +31,7 @@
 		border-radius: 4px;
 		color: $color-svg-icon;
 
-		@include transition($property:color);
-		@include transition($property:border);
+		@include transition();
 
 		&:hover, &:focus{
 			color: $main-color;

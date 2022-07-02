@@ -17,8 +17,7 @@
 		border-radius: 50%;
 		color: $color-svg-icon;
 
-		@include transition($property:color);
-		@include transition($property:background-color);
+		@include transition();
 
 		&--dark {
 			color: $color-main-light;

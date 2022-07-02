@@ -2,7 +2,6 @@
 .footer{
 	background-color: $color-bg-dark;
 	padding: 60px 0;
-	// text-align: center;
 	
 		&__container{
 			// align-items: baseline;
@@ -14,22 +13,9 @@
 
 			@media screen and (min-width: 1200px) {
 				flex-wrap: nowrap;
-				// justify-content: space-between;
 			}
 		}
-		// &__contacts-social {
-
-		// 	@media screen and (min-width: 768px) {
-		// 		display: flex;
-		// 		flex-grow: 1;
-		// 		margin-bottom: 60px;
-		// 	}
-
-		// 	@media screen and (min-width: 1200px) {
-		// 		margin-bottom: 0;
-		// 		flex-grow: 0;
-		// 	}
-		// }
+	
 		&__contacts{
 			text-align: center;
 
