@@ -1360,6 +1360,8 @@ body.no-scroll {
     position: absolute;
     top: 50%;
     left: 50%;
+    max-height: 100%;
+    overflow: auto;
     width: 452px;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
