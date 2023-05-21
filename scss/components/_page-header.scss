@@ -1,285 +1,297 @@
 // ----------- section header -----------
 .header {
-	position: relative;
-	background-color: $color-main-light;
-	text-decoration: none;
-	letter-spacing: 0.02em;
-	line-height: 1.17;
-	font-weight: 500;
-	border-bottom: 1px solid #ECECEC;	
+  position: relative;
+  background-color: $color-main-light;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  line-height: 1.17;
+  font-weight: 500;
+  border-bottom: 1px solid #ececec;
 
-	@media screen and (min-width: 768px) {
-		font-size: 14px;
-		line-height: 1.14;
-		}
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
-	&__container {
-		@include flexCenter($main-axis:space-between);
-		min-height: 60px;
+  &__container {
+    @include flexCenter($main-axis: space-between);
+    min-height: 60px;
 
-		@media screen and (min-width: 768px) {
-			min-height: 80px;
-			display: flex;
-		}
-	}	
-	&__logo {}
-	&__button {
-		position: relative;
-		z-index: 3;
-		background-color: transparent;
-		color: $color-main-dark;
+    @media screen and (min-width: 768px) {
+      min-height: 80px;
+      display: flex;
+    }
+  }
+  &__logo {
+  }
+  &__button {
+    position: relative;
+    z-index: 3;
+    background-color: transparent;
+    color: $color-main-dark;
 
-		&:hover, &:focus {
-			color: $main-color;
-		}
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
 
-		&.is-open .header__icon-close {
-			display: block;
-		}
+    &.is-open .header__icon-close {
+      display: block;
+    }
 
-		&.is-open .header__icon-burger {
-			display: none;
-		}
+    &.is-open .header__icon-burger {
+      display: none;
+    }
 
-		@media screen and (min-width: 768px) {
-			display: none;
-		}
-	}
-	&__icon-menu {
-		display: block;
-		fill: currentColor;
-	}
-	&__icon-burger {}
-	&__icon-close {
-		display: none;
-	}
-	&__menu-container {
-		
-		background-color: $color-main-light;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__icon-menu {
+    display: block;
+    fill: currentColor;
+  }
+  &__icon-burger {
+  }
+  &__icon-close {
+    display: none;
+  }
+  &__menu-container {
+    background-color: $color-main-light;
 
-		@media screen and (max-width: 767px) {
-			opacity: 0;
-			pointer-events: none;
+    @media screen and (max-width: 767px) {
+      opacity: 0;
+      pointer-events: none;
 
-			display: flex;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			min-height: 100vh;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
 
-			flex-direction: column;
-			z-index: 2;
+      flex-direction: column;
+      z-index: 2;
 
-			padding: 40px;
-			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-			
-			@include transition($property:opacity);
+      padding: 40px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+        0px 1px 3px rgba(0, 0, 0, 0.16);
 
-			&.is-open {
-				opacity: 1;
-				pointer-events: auto;
-			}
-		}
+      @include transition($property: opacity);
 
-		@media screen and (min-width: 768px) {
-			@include flexCenter($main-axis:space-between);
+      &.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
 
-			flex-grow: 1;
-			margin-left: 88px;
-		}
+    @media screen and (min-width: 768px) {
+      @include flexCenter($main-axis: space-between);
 
-		@media screen and (min-width: 1200px) {
-			margin-left: 93px;
-		}
-	}
-	
-	&__navigation {
-		flex-grow: 1;
-		
-		@media screen and (max-width: 767px) {
-			font-size: 40px;
-			margin-bottom: 100px;
-		}
+      flex-grow: 1;
+      margin-left: 88px;
+    }
 
-		@media screen and (min-width: 768px) {
-			display: flex;
-			align-items: center;
-		}
-	}
-		
-	&__list {
+    @media screen and (min-width: 1200px) {
+      margin-left: 93px;
+    }
+  }
 
-		@media screen and (min-width: 768px) {
-			display: flex;
-		}
-	}
-	&__item {
-			
-		@media screen and (max-width: 767px) {
-			&:not(:last-child){
-				margin-bottom: 32px;
-			}
-		}
-		
-		@media screen and (min-width: 768px) {
-			&:not(:last-child){
-			margin-right: 50px;
-			}
-		}
-		
-	}
-	&__link {
-		color: $color-main-dark;
+  &__navigation {
+    flex-grow: 1;
 
-		@include transition($property:color);
+    @media screen and (max-width: 767px) {
+      font-size: 40px;
+      margin-bottom: 100px;
+    }
 
-		&:hover, &:focus {
-			color: $main-color;	
-		}
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+  }
 
-		@media screen and (min-width: 768px) {
-			padding: 33px 0;
-		}
-	}
-	&__link--current {
-		position: relative;
-		color: $main-color;
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &__item {
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
 
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			bottom: -1px;
-			left: 0;
-			width: 100%;
-			height: 4px;
+    @media screen and (min-width: 768px) {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+  &__link {
+    color: $color-main-dark;
 
-			background-color: $main-color;
-			border-radius: 2px;
-			
-			@media screen and (max-width: 767px) {
-				display: none;
-			}
-		}
-	}
-	&__contacts {
-		display: flex;
-		flex-direction: column-reverse;
+    @include transition($property: color);
 
-		@media screen and (max-width: 767px) {
-			margin-bottom: 64px;
-		}
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
 
-		@media screen and (min-width: 768px) {
-			flex-direction: column;
-		}
+    @media screen and (min-width: 768px) {
+      padding: 33px 0;
+    }
+  }
+  &__link--current {
+    position: relative;
+    color: $main-color;
 
-		@media screen and (min-width: 1200px) {
-			flex-direction: row;
-		}
-	}
-	&__contact-item {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
 
-		@media screen and (max-width: 767px) {
-			&:last-child {
-				margin-bottom: 32px;
-			}
-		}
-		
-		@media screen and (min-width: 768px) {
-			&:not(:last-child) {
-				margin-bottom: 10px;
-			}
-		}
+      background-color: $main-color;
+      border-radius: 2px;
 
-		@media screen and (min-width: 1200px) {
-			&:not(:last-child) {
-				margin-bottom: 0;
-				margin-right: 30px;
-			}
-		}
-	}
-	&__contact-link {
-		font-size: 24px;
-		color: $color-second-dark;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column-reverse;
 
-		@include transition($property:color);
+    @media screen and (max-width: 767px) {
+      margin-bottom: 64px;
+    }
 
-		&:hover, &:focus{
-			color: $main-color;
-		}
-		
-		@media screen and (max-width: 767px) {
-			
-			&--accent {
-				font-size: 34px;
-				color: $main-color;
-			}
-		}
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+    }
 
-		@media screen and (max-width: 455px) {
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+  &__contact-item {
+    @media screen and (max-width: 767px) {
+      &:last-child {
+        margin-bottom: 32px;
+      }
+    }
 
-			&--accent {
-				font-size: 24px;
-			}
-		}
-		
-		@media screen and (min-width: 768px) {
-			display: flex;
-			align-items: center;
-			font-size: 12px;
-		}
+    @media screen and (min-width: 768px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
 
-		@media screen and (min-width: 1200px) {
-			font-size: 14px;
-			padding: 33px 0;
-		}
-	}
-	&__contact-box {
+    @media screen and (min-width: 1200px) {
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
+    }
+  }
+  &__contact-link {
+    font-size: 24px;
+    color: $color-second-dark;
 
-		@media screen and (min-width: 768px) {
-			margin-right: 10px;
-		}
-	}
-	&__contact-icon {
-		display: none;
+    @include transition($property: color);
 
-		@media screen and (min-width: 768px) {
-			display: block;
-			fill: currentColor;
-		}
-	}
-	&__contact-text {}
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
 
-	&__social {
-		font-size: 18px;
-		line-height: 1.22;
+    @media screen and (max-width: 767px) {
+      &--accent {
+        font-size: 34px;
+        color: $main-color;
+      }
+    }
 
-		@media screen and (min-width: 768px) {
-			display: none
-		}
-	}
-	&__social-item {
-		display: inline-block;
+    @media screen and (max-width: 455px) {
+      &--accent {
+        font-size: 24px;
+      }
+    }
 
-		&:not(:first-child) {
-			border-left: 1px solid rgba(33, 33, 33, 0.2);
-			padding-left: 10px;
-		}
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
-	}
-	&__social-link {
-		color: $main-color;
-		
-		&:hover, &:focus{
-			color: $color-bg-main;
-		}
-	}
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      padding: 33px 0;
+    }
+  }
+  &__contact-box {
+    @media screen and (min-width: 768px) {
+      margin-right: 10px;
+    }
+  }
+  &__contact-icon {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      fill: currentColor;
+    }
+  }
+  &__contact-text {
+  }
+
+  &__social {
+    font-size: 18px;
+    line-height: 1.22;
+
+    @media screen and (max-width: 460px) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__social-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      padding-right: 10px;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 460px) {
+      &:not(:last-child) {
+        border: none;
+      }
+    }
+  }
+  &__social-link {
+    color: $main-color;
+
+    &:hover,
+    &:focus {
+      color: $color-bg-main;
+    }
+  }
 }
 
 body.no-scroll {
-	overflow: hidden;
+  overflow: hidden;
 }

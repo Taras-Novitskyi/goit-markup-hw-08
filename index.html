@@ -10,6 +10,16 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./animate/animate.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>webstudio</title>
   </head>
@@ -52,7 +62,7 @@
                   <a class="header__link" href="./portfolio.html">Портфолио</a>
                 </li>
                 <li class="header__item">
-                  <a class="header__link" href="">Контакты</a>
+                  <a class="header__link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -218,7 +228,12 @@
 
         <section class="main__works works">
           <div class="main__container container">
-            <h2 class="works__title title">Чем мы занимаемся</h2>
+            <h2
+              class="works__title title animate__animated animate__bounce wow"
+              data-wow-delay="1000ms"
+            >
+              Чем мы занимаемся
+            </h2>
             <ul class="works__list">
               <li class="works__item">
                 <div class="works__img">
@@ -269,6 +284,7 @@
         <section class="main__team team">
           <div class="main__container container">
             <h2 class="team__title title">Наша команда</h2>
+            //add ul classname "your-element" and use slider in this project
             <ul class="team__list">
               <li class="team__item">
                 <img
@@ -369,7 +385,7 @@
               <li class="team__item">
                 <img
                   class="team__card-img"
-				  srcset="
+                  srcset="
                     ./img/webstudio/team/marketing270w.jpg   270w,
                     ./img/webstudio/team/marketing540w.jpg   540w,
                     ./img/webstudio/team/marketing810w.jpg   810w,
@@ -417,7 +433,7 @@
               <li class="team__item">
                 <img
                   class="team__card-img"
-				  srcset="
+                  srcset="
                     ./img/webstudio/team/uidesigner270w.jpg   270w,
                     ./img/webstudio/team/uidesigner540w.jpg   540w,
                     ./img/webstudio/team/uidesigner810w.jpg   810w,
@@ -519,7 +535,7 @@
 
       <footer class="footer">
         <div class="footer__container container">
-          <div class="footer__contacts">
+          <div class="footer__contacts" id="contacts">
             <a class="footer__logo logo logo--wht" href="" lang="en">Web<span>Studio</span></a>
             <address class="footer__address">
               <ul class="footer__list">
@@ -596,5 +612,26 @@
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./slider/slick-min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.your-element').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear',
+          autoplay: true,
+        });
+      });
+    </script>
+
+    <script src="./animate/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

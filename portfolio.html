@@ -54,7 +54,7 @@
                   >
                 </li>
                 <li class="header__item">
-                  <a class="header__link" href="">Контакты</a>
+                  <a class="header__link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -108,24 +108,24 @@
             <nav class="portfolio__menu">
               <ul class="portfolio__list">
                 <li class="portfolio__item">
-                  <button type="button" class="buttons buttons--active">Все</button>
+                  <button type="button" class="buttons buttons--active" data-filter="all">Все</button>
+                </li>
+                <li class="portfolio__item" >
+                  <button type="button" class="buttons" data-filter="web">Веб-сайты</button>
                 </li>
                 <li class="portfolio__item">
-                  <button type="button" class="buttons">Веб-сайты</button>
+                  <button type="button" class="buttons" data-filter="app">Приложения</button>
                 </li>
                 <li class="portfolio__item">
-                  <button type="button" class="buttons">Приложения</button>
+                  <button type="button" class="buttons" data-filter="design">Дизайн</button>
                 </li>
                 <li class="portfolio__item">
-                  <button type="button" class="buttons">Дизайн</button>
-                </li>
-                <li class="portfolio__item">
-                  <button type="button" class="buttons">Маркетинг</button>
+                  <button type="button" class="buttons" data-filter="marketing">Маркетинг</button>
                 </li>
               </ul>
             </nav>
-            <ul class="portfolio__row">
-              <li class="portfolio__element">
+            <ul class="portfolio__row data-portfolio-list">
+              <li class="portfolio__element" data-filter="web">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img
@@ -148,7 +148,7 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__element">
+              <li class="portfolio__element" data-filter="design">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img
@@ -171,7 +171,7 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__element">
+              <li class="portfolio__element" data-filter="app">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img srcset="./img/portfolio/img3-1x.jpg 1x, ./img/portfolio/img3-2x.jpg 2x"
@@ -190,7 +190,7 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__element">
+              <li class="portfolio__element" data-filter="marketing">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img srcset="./img/portfolio/img4-1x.jpg 1x, ./img/portfolio/img4-2x.jpg 2x"
@@ -209,7 +209,7 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__element">
+              <li class="portfolio__element" data-filter="app">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img srcset="./img/portfolio/img5-1x.jpg 1x, ./img/portfolio/img5-2x.jpg 2x"
@@ -228,7 +228,7 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__element">
+              <li class="portfolio__element" data-filter="web">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img srcset="./img/portfolio/img6-1x.jpg 1x, ./img/portfolio/img6-2x.jpg 2x"
@@ -247,7 +247,7 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__element">
+              <li class="portfolio__element" data-filter="design">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img srcset="./img/portfolio/img7-1x.jpg 1x, ./img/portfolio/img7-2x.jpg 2x"
@@ -266,7 +266,7 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__element">
+              <li class="portfolio__element" data-filter="marketing">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img srcset="./img/portfolio/img8-1x.jpg 1x, ./img/portfolio/img8-2x.jpg 2x"
@@ -285,7 +285,7 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__element">
+              <li class="portfolio__element" data-filter="app">
                 <a href="" class="portfolio__card">
                   <div class="portfolio__img">
                     <img srcset="./img/portfolio/img9-1x.jpg 1x, ./img/portfolio/img9-2x.jpg 2x"
@@ -311,7 +311,7 @@
 
       <footer class="footer">
         <div class="footer__container container">
-          <div class="footer__contacts">
+          <div class="footer__contacts" id="contacts">
             <a class="footer__logo logo logo--wht" href="" lang="en">Web<span>Studio</span></a>
             <address class="footer__address">
               <ul class="footer__list">
@@ -387,5 +387,6 @@
       </footer>
     </div>
     <script src="./js/menu.js"></script>
+    <script src="./js/filterPortfolio.js"></script>
   </body>
 </html>
